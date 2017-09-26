@@ -1,11 +1,14 @@
 package org.dimigo.servlet;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class LogoutServlet
@@ -34,8 +37,13 @@ public class LogoutServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		// 세션 삭제
+		HttpSession session = request.getSession();
+		//session.removeAttribute("user");
+		session.invalidate();
+		
+		RequestDispatcher rd = request.getRequestDispatcher("/jsp/home.jsp");
+	    rd.forward(request, response);
 	}
 
 }
