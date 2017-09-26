@@ -53,7 +53,9 @@ function menu_out(e) {
           <%= user.getName() %>님
          </a>
          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+            <form action="/WebClass/Logout" method="post">
             <button type="submit" class="dropdown-item">Sign out</button>
+            </form>
              <div class="dropdown-divider"></div>
            <button type="button" class="dropdown-item">Action1</button>
            <button type="button" class="dropdown-item">Action2</button>
