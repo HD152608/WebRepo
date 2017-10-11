@@ -41,7 +41,24 @@
 		myModal.find('.modal-title').text('Login Error');
 		myModal.find('.modal-body').text('Invalid id');
 		myModal.modal();
+		
 	<% } %>
+
+	  $("#start_ajax").click(function(){
+		    $.ajax({
+		        type:"POST",
+		        url:"jsp/bloglogin.jsp",
+		        data : {name : id},
+		        dataType : "xml",
+		        success: function(xml){
+		            console.log(xml);
+		        },
+		        error: function(xhr, status, error) {
+		            alert(error);
+		        }  
+		    });
+		});
+	    
 </script>
 
 </body>

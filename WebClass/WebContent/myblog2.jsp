@@ -51,8 +51,9 @@
     %>
        <a class="text-bold text-white" style="text-decoration: none" href="/WebClass/bloglogin">Sign in</a>
        <span class="text-bold text-white">&nbsp; or &nbsp;</span>
-       <a class="text-bold text-white" style="text-decoration: none" href="#">Sign up</a>
+       <a class="text-bold text-white" style="text-decoration: none" href="jsp/signup.jsp">Sign up</a>
     <% } else { %>
+    <%-- 세션에 사용자 정보가 있는 경우 --%>
        <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
        <li class="nav-item dropdown">
          <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -84,8 +85,5 @@
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
 		integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
 		crossorigin="anonymous"></script>
-  <script>
-   
-    </script>
 </body>
 </html>
