@@ -21,7 +21,7 @@
     <label for="inputPassword" class="sr-only">Password</label>
     <input type="password" name="pwd" id="inputPassword" class="form-control" placeholder="Password" required>
 
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <button class="btn btn-lg btn-primary btn-block" id="in" type="submit">Sign in</button>
   </form>
 
 </div>
@@ -33,7 +33,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
 <script>
-	<%-- 로그인이 실패한 경우 처리 추가 --%>
 	<% 
 	 if("error".equals(request.getAttribute("msg"))){
 	%>
@@ -41,24 +40,9 @@
 		myModal.find('.modal-title').text('Login Error');
 		myModal.find('.modal-body').text('Invalid id');
 		myModal.modal();
-		
+		$('input[name="id"]').val("<%=request.getAttribute("id")%>");
 	<% } %>
 
-	  $("#start_ajax").click(function(){
-		    $.ajax({
-		        type:"POST",
-		        url:"jsp/bloglogin.jsp",
-		        data : {name : id},
-		        dataType : "xml",
-		        success: function(xml){
-		            console.log(xml);
-		        },
-		        error: function(xhr, status, error) {
-		            alert(error);
-		        }  
-		    });
-		});
-	    
 </script>
 
 </body>
