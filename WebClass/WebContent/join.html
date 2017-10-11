@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+	integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+	crossorigin="anonymous"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+	integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+	crossorigin="anonymous"></script>
+
+<script src="js1.js"></script>
+
+<title>join page</title>
+<link rel="stylesheet" href="css1.css">
+<script>
+	function menu_over(e) {
+		e.setAttribute("class", "nav-item active");
+	}
+
+	function menu_out(e) {
+		e.setAttribute("class", "nav-item");
+	}
+</script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+	integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+	crossorigin="anonymous">
+
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="myblog.html">HOME</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item" onmouseover="menu_over(this);"
+					onmouseout="menu_out(this);"><a class="nav-link"
+					href="dog.html">강아지 사진 <span class="sr-only">(current)</span>
+				</a></li>
+				<li class="nav-item" onmouseover="menu_over(this);"
+					onmouseout="menu_out(this);"><a class="nav-link"
+					href="food.html">맛있는 것</a></li>
+				<li class="nav-item" onmouseover="menu_over(this);"
+					onmouseout="menu_out(this);"><a class="nav-link"
+					href="exercise.html">운동</a></li>
+			</ul>
+			<form class="form-inline my-2 my-lg-0" id="loginForm">
+				<input class="form-control mr-sm-2" type="text" placeholder="id"
+					aria-label="ID" id="id" required> <input
+					class="form-control mr-sm-2" type="password" placeholder="pwd"
+					aria-label="PWD" id="pwd" required>
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+				<a class="btn btn-outline-success" id="joinForm" href="join.html"
+					role="button">join</a>
+			</form>
+		</div>
+	</nav>
+	<form id="joinForm">
+		학년 :<br>
+		<div class="form-check form-check-inline">
+			<label class="form-check-label"> <input
+				class="form-check-input" type="radio" name="grade" id="g1"
+				value="option1" required> 1학년
+			</label>
+		</div>
+		<div class="form-check form-check-inline">
+			<label class="form-check-label"> <input
+				class="form-check-input" type="radio" name="grade" id="g2"
+				value="option2" required> 2학년
+			</label>
+		</div>
+		<div class="form-check form-check-inline">
+			<label class="form-check-label"> <input
+				class="form-check-input" type="radio" name="grade" id="g3"
+				value="option3" required> 3학년
+			</label>
+		</div>
+		<select name="class" required>
+			<option value="">-반선택-</option>
+			<option value="1">1반</option>
+			<option value="2">2반</option>
+			<option value="3">3반</option>
+			<option value="4">4반</option>
+			<option value="5">5반</option>
+			<option value="6">6반</option>
+		</select>
+		<div class="form-row">
+			<div class="form-group col-md-6">
+				<label for="number" class="col-form-label">번호</label> <input
+					type="text" class="form-control" id="number" placeholder="number"
+					required>
+			</div>
+			<div class="form-group col-md-6">
+				<label for="name" class="col-form-label">이름</label> <input
+					type="text" class="form-control" id="name" placeholder="name"
+					required>
+
+			</div>
+			<input class="btn btn-primary" type="submit" value="join us">
+		</div>
+	</form>
+	<div class="modal" id="joinModal">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">환영합니다!</h5>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 모달  -->
+	<div class="modal" id="myModal">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">로그인</h5>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js2.js"></script>
+</body>
+</html>
