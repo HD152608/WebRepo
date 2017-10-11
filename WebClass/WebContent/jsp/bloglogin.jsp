@@ -39,7 +39,7 @@
 	%>
 		var myModal = $('#myModal');
 		myModal.find('.modal-title').text('Login Error');
-		myModal.find('.modal-body').text('Invalid email');
+		myModal.find('.modal-body').text('Invalid id');
 		myModal.modal();
 	<% } %>
 </script>
