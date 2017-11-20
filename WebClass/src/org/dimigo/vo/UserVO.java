@@ -17,12 +17,27 @@ package org.dimigo.vo;
  */
 public class UserVO {
 	
+	/**
+	 * @param id
+	 * @param name
+	 * @param nickname
+	 */
+	
 	private String id;
 	private String name;
 	private String nickname;
+	
+	public UserVO(){
+		
+	}
 	/**
 	 * @return the id
 	 */
+	public UserVO(String id, String name, String nickname) {
+		this.id = id;
+		this.name = name;
+		this.nickname = nickname;
+	}
 	public String getId() {
 		return id;
 	}

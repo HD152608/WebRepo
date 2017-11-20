@@ -37,8 +37,8 @@
 	 if("error".equals(request.getAttribute("msg"))){
 	%>
 		var myModal = $('#myModal');
-		myModal.find('.modal-title').text('Login Error');
-		myModal.find('.modal-body').text('Invalid id');
+		myModal.find('.modal-title').text('로그인 에러');
+		myModal.find('.modal-body').text('아이디 불일치');
 		myModal.modal();
 		$('input[name="id"]').val("<%=request.getAttribute("id")%>");
 	<% } %>

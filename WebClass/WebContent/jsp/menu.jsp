@@ -5,10 +5,10 @@
           <a class="nav-link" href="/WebClass/session">메뉴1 </a>
         </li>
         <li class="nav-item" onmouseover="menu_over(this);" onmouseout="menu_out(this);">
-          <a class="nav-link" href="#">메뉴2</a>
+          <a class="nav-link" href="/WebClass/list">메뉴2</a>
         </li>
         <li class="nav-item" onmouseover="menu_over(this);" onmouseout="menu_out(this);">
-          <a class="nav-link" href="#">메뉴3</a>
+          <a class="nav-link" href="dom.html">메뉴3</a>
         </li>
       </ul>
     
